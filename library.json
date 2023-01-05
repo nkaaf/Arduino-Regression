@@ -1,0 +1,42 @@
+{
+  "name": "Regression",
+  "version": "1.0.0",
+  "description": "Easy-to-use Statistical Regressions. This library extends the Arduino ecosystem with the functionality of several easy-to-use statistical regressions.",
+  "keywords": [
+    "arduino",
+    "math",
+    "statistic"
+  ],
+  "homepage": "https://nkaaf.github.io/Arduino-Regression",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nkaaf/Arduino-Regression"
+  },
+  "authors": {
+    "name": "Niklas Kaaf",
+    "email": "nkaaf@protonmail.com",
+    "url": "https://github.com/nkaaf",
+    "maintainer": true
+  },
+  "license": "LGPL-2.1-only",
+  "frameworks": "*",
+  "platforms": "*",
+  "headers": "Linear2DRegression.hpp",
+  "examples": [
+    {
+      "name": "Linear2DRegression",
+      "base": "examples/Regression/Linear2DRegression",
+      "files": [
+        "Linear2DRegression.ino"
+      ]
+    }
+  ],
+  "export": {
+    "import": [
+      "examples/*",
+      "src/*",
+      "library.json",
+      "LICENSE"
+    ]
+  }
+}
