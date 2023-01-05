@@ -1,6 +1,0 @@
-.idea
-cmake-build-*
-
-# gh_pages files
-doxygen_sqlite3.db
-html
