@@ -7,8 +7,8 @@ void setup() {
   Serial.begin(9600);
 
   // Set points of a linear graph: y = 2 * x + 10
-  linear2DRegression->setPoint(0, 10);
-  linear2DRegression->setPoint(5, 20);
+  linear2DRegression->addPoint(0, 10);
+  linear2DRegression->addPoint(5, 20);
 
   // Test functionality with a simple x-value => 10
   Serial.println("Simple test: y = 2 * 10 + 10 => y should be 30");

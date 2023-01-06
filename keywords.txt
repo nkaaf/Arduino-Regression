@@ -12,6 +12,6 @@ Linear2DRegression	KEYWORD1
 # Methods and Functions (KEYWORD2)
 ###########################################
 
-setPoint	KEYWORD2
+addPoint	KEYWORD2
 calculate	KEYWORD2
 reset	KEYWORD2

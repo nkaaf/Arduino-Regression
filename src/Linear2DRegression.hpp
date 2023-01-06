@@ -46,15 +46,40 @@
 #ifndef ARDUINO_REGRESSION_LINEAR2DREGRESSION_HPP
 #define ARDUINO_REGRESSION_LINEAR2DREGRESSION_HPP
 
+/*!
+ * @brief   Class representing the regression. It provides methods to add
+ * points, reset the whole regression and calculate a specific value in context
+ * of the regression.
+ */
 class Linear2DRegression {
 private:
-  double intercept, slope, sumX = 0.0, sumX2 = 0.0, sumY = 0.0, sumY2 = 0.0,
-                           sumXY = 0.0;
-  int n = 0;
+  double intercept = 0, slope = 0, sumX = 0.0, sumX2 = 0.0, sumY = 0.0,
+         sumY2 = 0.0, sumXY = 0.0; /// Values for the formula
+  int n = 0;                       /// Number of points, added with addPoint()
 
 public:
-  void setPoint(double x, double y);
+  /*!
+   * @brief Add Points to the regression. In this method, the regression formula
+   * will be created. Points of interests can be calculated by calculate()
+   * method.
+   *
+   * @param x   X-value of point
+   * @param y   Y-value of point
+   */
+  void addPoint(double x, double y);
+
+  /*!
+   * @brief Calculate a Y-value in context of the regression.
+   *
+   * @param x   X-value of point of interest
+   * @return The Y-value of the point
+   */
   double calculate(double x);
+
+  /*!
+   * @brief Remove all points that are added by addPoint() and therefore delete
+   * regression.
+   */
   void reset();
 };
 

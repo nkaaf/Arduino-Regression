@@ -26,13 +26,7 @@
 
 #include <math.h>
 
-// https://www.wallstreetmojo.com/regression-formula/
-// y => dependent variable
-// x => independent (explanatory) variable
-// a => intercept
-// b => slope
-// e => residual (error)
-void Linear2DRegression::setPoint(double x, double y) {
+void Linear2DRegression::addPoint(double x, double y) {
   this->n++;
 
   this->sumX += x;
@@ -41,6 +35,7 @@ void Linear2DRegression::setPoint(double x, double y) {
   this->sumY2 += pow(y, 2);
   this->sumXY += x * y;
 
+  /** The formula: https://www.wallstreetmojo.com/regression-formula/ */
   this->intercept =
       ((sumY * sumX2) - (sumX * sumXY)) / (n * sumX2 - pow(sumX, 2));
   this->slope = ((n * sumXY) - (sumX * sumY)) / (n * sumX2 - pow(sumX, 2));
