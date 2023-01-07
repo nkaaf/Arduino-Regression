@@ -1,6 +1,6 @@
 {
   "name": "Regression",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Easy-to-use Statistical Regressions. This library extends the Arduino ecosystem with the functionality of several easy-to-use statistical regressions.",
   "keywords": [
     "arduino",
@@ -32,7 +32,7 @@
     }
   ],
   "export": {
-    "import": [
+    "include": [
       "examples/*",
       "src/*",
       "library.json",
