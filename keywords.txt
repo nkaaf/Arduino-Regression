@@ -15,3 +15,4 @@ Linear2DRegression	KEYWORD1
 addPoint	KEYWORD2
 calculate	KEYWORD2
 reset	KEYWORD2
+getNumberOfPoints   KEYWORD2

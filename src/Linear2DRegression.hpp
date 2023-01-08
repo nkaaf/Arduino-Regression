@@ -46,6 +46,8 @@
 #ifndef ARDUINO_REGRESSION_LINEAR2DREGRESSION_HPP
 #define ARDUINO_REGRESSION_LINEAR2DREGRESSION_HPP
 
+#include "stdlib.h"
+
 /*!
  * @brief   Class representing the regression. It provides methods to add
  * points, reset the whole regression and calculate a specific value in context
@@ -55,7 +57,7 @@ class Linear2DRegression {
 private:
   double intercept = 0, slope = 0, sumX = 0.0, sumX2 = 0.0, sumY = 0.0,
          sumY2 = 0.0, sumXY = 0.0; /// Values for the formula
-  int n = 0;                       /// Number of points, added with addPoint()
+  size_t n = 0;                    /// Number of points, added with addPoint()
 
 public:
   /*!
@@ -81,6 +83,12 @@ public:
    * regression.
    */
   void reset();
+
+  /*!
+   * @brief Get number of points, added to the regression.
+   * @return    Number of points added.
+   */
+  size_t getNumberOfPoints() { return this->n; }
 };
 
 #endif // ARDUINO_REGRESSION_LINEAR2DREGRESSION_HPP
