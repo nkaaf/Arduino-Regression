@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['linear2dregression',['Linear2DRegression',['../class_linear2_d_regression.html',1,'']]],
-  ['linear2dregression_2ecpp',['Linear2DRegression.cpp',['../_linear2_d_regression_8cpp.html',1,'']]]
+  ['getnumberofpoints',['getNumberOfPoints',['../class_linear2_d_regression.html#a781bde7245be1b24748367b5085bbd2a',1,'Linear2DRegression']]]
 ];
